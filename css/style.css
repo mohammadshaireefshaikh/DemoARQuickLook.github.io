@@ -92,7 +92,8 @@ header{
 }
 
 header .logo{
-  font-size: 2.5rem;
+  font-size: 3rem;
+  padding-top: 0 rem;
   font-weight: bolder;
   color:#666;
 }
@@ -425,6 +426,12 @@ header .navbar a:hover{
   border:.1rem solid rgba(0,0,0,.3);
   border-radius: .5rem;
   width:49%;
+}
+.list{
+  font-size: 1.5rem;
+  padding: 2 rem;
+  font-weight: bolder;
+  color:#666;
 }
 
 .order .row form textarea{
