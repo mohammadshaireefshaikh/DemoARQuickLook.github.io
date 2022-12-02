@@ -10,7 +10,7 @@
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
-
+    
 </head>
 <body>
     
@@ -127,8 +127,12 @@
 
         <div class="box">
             <span class="price"> 60rs - 70rs </span>
+            <model-viewer
+            src="ar/BurgerBun.glb"
+            ios-src="ar/fender_stratocaster.usdz"
+            ar auto-rotate camera-controls background-color="#2EAFAC">
+            </model-viewer>
             
-            <img src="images/p-1.jpg" alt="">
           </a>
 
             <h3>Mini Waffle</h3>
@@ -140,7 +144,7 @@
                 <i class="far fa-star"></i>
             </div>
             <a >
-            <a href="ar/fender_stratocaster.usdz" rel="ar" class="btn">View Model</a>
+            <a href="" rel="ar" class="btn">View Model</a>
         </div>
         <div class="box">
             <span class="price"> $5 - $20 </span>
@@ -441,17 +445,11 @@
 <!-- scroll top button  -->
 <a href="#home" class="fas fa-angle-up" id="scroll-top"></a>
 
-<!-- loader  -->
+<!-- loader  
 <div class="loader-container">
     <img src="images/loader.gif" alt="">
 </div>
-
-
-
-
-
-
-
+-->
 
 
 
@@ -467,7 +465,7 @@
 
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
-
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
 </body>
 </html>
