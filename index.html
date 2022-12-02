@@ -25,11 +25,11 @@
 
     <nav class="navbar">
         <a href="#home">home</a>
-        <a href="#speciality">speciality</a>
+        <!--<a href="#speciality">speciality</a>-->
         <a href="#popular">popular</a>
-        <a href="#gallery">gallery</a>
-        <a href="#review">review</a>
-        <a href="#order">order</a>
+        <!--<a href="#gallery">gallery</a>
+        <a href="#review">review</a>-->
+        <a href="#order">review</a>
     </nav>
 
 </header>
@@ -55,7 +55,7 @@
 <!-- home section ends -->
 
 <!-- speciality section starts  -->
-
+<!--
 <section class="speciality" id="speciality">
 
     <h1 class="heading"> our <span>speciality</span> </h1>
@@ -114,7 +114,7 @@
     </div>
 
 </section>
-
+-->
 <!-- speciality section ends -->
 
 <!-- popular section starts  -->
@@ -124,16 +124,13 @@
     <h1 class="heading"> most <span>popular</span> foods </h1>
 
     <div class="box-container">
-        
+
         <div class="box">
-            
-            <!--<model-viewer
+            <model-viewer alt=""
             src="ar/BurgerBun.glb"
             ios-src="ar/fender_stratocaster.usdz"
-            ar auto-rotate camera-controls background-color="#2EAFAC"
-            camera-controls touch-action="pan-y" >
-            </model-viewer>-->
-            <img src="images/p-1.jpg" alt="">
+            ar auto-rotate camera-controls background-color="#2EAFAC">
+            </model-viewer>
             <span class="price"> 60rs - 70rs </span>
           </a>
 
@@ -146,7 +143,7 @@
                 <i class="far fa-star"></i>
             </div>
             <a >
-            <a href="ar/fender_stratocaster.usdz" rel="ar" class="btn">View Model</a>
+            <a href="" rel="ar" class="btn">View Model</a>
         </div>
         <div class="box">
             <span class="price"> $5 - $20 </span>
@@ -213,6 +210,19 @@
             </div>
             <a href="#" class="btn">order now</a>
         </div>
+         <div class="box">
+            <span class="price"> $5 - $20 </span>
+            <img src="images/p-6.jpg" alt="">
+            <h3>cold ice-cream</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <a href="#" class="btn">order now</a>
+        </div>
 
     </div>
 
@@ -221,7 +231,7 @@
 <!-- popular section ends -->
 
 <!-- steps section starts  -->
-
+<!--
 <div class="step-container">
 
     <h1 class="heading">how it <span>works</span></h1>
@@ -248,11 +258,11 @@
     </section>
 
 </div>
-
+-->
 <!-- steps section ends -->
 
 <!-- gallery section starts  -->
-
+<!--
 <section class="gallery" id="gallery">
 
     <h1 class="heading"> our food <span> gallery </span> </h1>
@@ -335,11 +345,11 @@
     </div>
 
 </section>
-
+-->
 <!-- gallery section ends -->
 
 <!-- review section starts  -->
-
+<!-- 
 <section class="review" id="review">
 
     <h1 class="heading"> our customers <span>reviews</span> </h1>
@@ -386,7 +396,7 @@
     </div>
 
 </section>
-
+-->
 <!-- review section ends -->
 
 <!-- order section starts  -->
@@ -468,6 +478,7 @@
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
 
 </body>
 </html>
