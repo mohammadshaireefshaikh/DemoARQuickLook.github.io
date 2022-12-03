@@ -25,6 +25,12 @@ html{
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
 }
+.examples-container {
+  margin-left: var(--sidebar-width);
+  transition-property: margin-left;
+  transition: var(--sidebar-speed);
+  transition-timing-function: linear;
+}
 
 body{
   background:#f7f7f7;
@@ -623,4 +629,16 @@ label.star:before {
     width:100%;
   }
 
+}
+
+.demo {
+  grid-area: demo;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  border: 0px solid #555;
+  box-sizing: border-box;
 }
