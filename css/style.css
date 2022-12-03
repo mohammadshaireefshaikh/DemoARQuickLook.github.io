@@ -631,14 +631,24 @@ label.star:before {
 
 }
 
-.demo {
-  grid-area: demo;
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  border: 0px solid #555;
-  box-sizing: border-box;
+.demo{
+    width: 30%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #ffffff;
+    text-align: center;
 }
+
+@media only screen and (min-width: 375px) and (max-width: 812px) {
+    .demo{    
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+  }
