@@ -549,10 +549,22 @@ label.star:before {
 }
 
 
+  .examples-container>.sample>#demo-container-1 {
+    margin-top: 75px;
+    padding-top: 0px;
+  }
+  .examples-container {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 
 
-
-
+.examples-container {
+  margin-left: var(--sidebar-width);
+  transition-property: margin-left;
+  transition: var(--sidebar-speed);
+  transition-timing-function: linear;
+}
 
 /* media queries  */
 
