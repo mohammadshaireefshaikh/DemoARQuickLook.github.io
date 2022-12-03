@@ -2,25 +2,27 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="height=device-height ,width=device-width, initial-scale=1.0">
 <title>Model Viewer</title>
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
 <style>
 model-viewer{
-width: 400px;
-height: 600px;
+max-width: 100%;
+max-width: 100%;
 margin: 0 auto;
 </style>
 </head>
 <body>
-<model-viewer alt=""
+    <div class="demo">
+        <model-viewer alt=""
             src="ar/AllInOne.glb"
             ios-src="ar/AllInOne.usdz"
             ar auto-rotate background-color="#2EAFAC"
             camera-controls touch-action="pan-y" disable-pan></model-viewer>
+    </div>
+
 </body>
 </html>
-
 
 
 
