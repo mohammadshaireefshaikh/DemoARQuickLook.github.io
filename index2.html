@@ -1,51 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Model Viewer</title>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+<style>
+model-viewer{
+width: 400px;
+height: 600px;
+margin: 0 auto;
+</style>
 </head>
 <body>
-<div id="demo-container" class="demo">
-<!-- Import the component -->
-
-
-<!-- Use it like any other HTML element -->
-<model-viewer src="ar/AllInOne.glb"
-            ios-src="ar/AllInOne.usdz"
-            default-progress-bar = true
-            ar auto-rotate camera-controls background-color="#2EAFAC" 
-            poster="images/waffle.jpg" touch-action="pan-y" ></model-viewer>
-                </div>
-
-
-<!--
-    <model-viewer class="boxForModel" alt=""
-            with-credentials = true
-            webxr = false 
-            scene-viewer 
-            quick-look 
-            canonicalWebPageURL="https://mohammadshaireefshaikh.github.io/DemoARQuickLook.github.io/"
-            src="ar/AllInOne.glb"
-            ios-src="ar/AllInOne.usdz"
-            default-progress-bar = true
-            ar auto-rotate camera-controls background-color="#2EAFAC">
-     </model-viewer>-->
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
+<model-viewer src="ar/AllInOne.glb"></model-viewer>
 </body>
 </html>
-
-
-
 
 
 
