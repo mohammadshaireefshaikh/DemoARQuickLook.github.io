@@ -11,8 +11,18 @@
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBEAG4l32MswTnNSNw3LWXXOX-QM08iiA&callback=initMap">
+</script>
 </head>
+
+
+
+
+
+
+
+
+
 <body>
     
 <!-- header section starts  -->
@@ -20,9 +30,23 @@
 <header>
 
     <a href="#" class="logo">
-        <img src="images/logo copy.png" alt=""></i>Conical Gaufres</a>
+        <img src="images/logo copy.png" alt="" id="demo" onload="getLocation()" ></i>Conical Gaufres</a>
+        <script>
+            var x = document.getElementById("demo");
+        function getLocation() {
+          if (navigator.geolocation) {
+                   navigator.geolocation.watchPosition(showPosition);
+             } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+              }
+            }
+            function showPosition(position) {
+             x.innerHTML = "Latitude: " + position.coords.latitude +"Longitude: " + position.coords.longitude;
+            }
+            </script>
+        
 
-    <div id="menu-bar" class="fas fa-bars"></div>
+    <div id="menu-bar" class="fas fa-bars" ></div>
 
     <nav class="navbar">
         <a href="#home">Home</a>
@@ -44,12 +68,21 @@
     <div class="content">
         <h3>Waffles made with love</h3>
         <p>Taste Heaven in your mouth</p>
-        <p>A taste so profound and complex that it can’t even be compared to other tastes, only to emotions.<br>
+        <p>A taste so profound and complex that it can’t even be compared to other tastes,only to emotions.<br>
            You should eat a waffle! You can’t be sad if you eat a waffle!</p>
+           
     </div>
 
     <div class="image">
+        
         <img src="images/FinalImg.png" alt="">
+        
+    </div>
+
+    <div class="video">
+        <video controls autoplay muted>
+            <source src="images/video.mp4.mp4" type="video/mp4">
+            </video>
     </div>
 
 </section>
@@ -120,7 +153,7 @@
 <!-- speciality section ends -->
 
 <!-- popular section starts  -->
-
+ 
 <section class="popular" id="popular">
 
     <h1 class="heading"> most <span>popular</span> Waffles </h1>
@@ -148,26 +181,26 @@
         </div>
         <div class="box">
             <span class="price"> 70rs </span>
-            <img src="images/p-1.jpg" alt="">
+            <img src="images/KitKat Crunch.jpeg" alt="">
             <h3>Kit-Kat Crunch</h3>
             <a href="index2.html" target="_blank" rel="ar" class="btn">View in 3D</a>
         </div>
         <div class="box">
             <span class="price"> 60rs </span>
-            <img src="images/p-1.jpg" alt="">
+            <img src="images/Oreo Fantasy.jpeg" alt="">
             <h3>Oreo Fantasy</h3>
             <a href="index2.html" target="_blank" rel="ar" class="btn">View in 3D</a>
         </div>
         <div class="box">
             <span class="price"> 60rs </span>
-            <img src="images/p-1.jpg" alt="">
+            <img src="images/Milk and dark delight.jpeg" alt="">
             <h3>Milk chocolate fantasy</h3>
             <a href="index2.html" target="_blank" rel="ar" class="btn">View in 3D</a>
         </div>
         <div class="box">
             <span class="price"> 60rs </span>
-            <img src="images/p-1.jpg" alt="">
-            <h3>Dark chocolate fantasy</h3>
+            <img src="images/Tripple Chocolate.jpeg" alt="">
+            <h3>Triple chocolate </h3>
             <a href="index2.html" target="_blank" rel="ar" class="btn">View in 3D</a>
         </div>
          <div class="box">
@@ -177,9 +210,76 @@
             <a href="index2.html" target="_blank" rel="ar" class="btn">View in 3D</a>
 
         </div>
+         <div class="box">
+            <span class="price"> 140rs </span>
+            <img src="images/Cheeky Chocolate.jpeg" alt="">
+            <h3>Cheeky Chocolate</h3>
+            <a href="index2.html" target="_blank" rel="ar" class="btn">View in 3D</a>
 
-    </div>
+        </div>
+         <div class="box">
+            <span class="price"> 120rs </span>
+            <img src="images/Sprinkle.jpeg" alt="">
+            <h3> Chocolate waffle with Sprinkle</h3>
+            <a href="index2.html" target="_blank" rel="ar" class="btn">View in 3D</a>
 
+        </div>
+
+        <div class="box">
+            <span class="price"> 160rs </span>
+            <img src="images/Kit Kat.jpeg" alt="">
+            <h3> Kit-Kat Waffle</h3>
+            <a href="index2.html" target="_blank" rel="ar" class="btn">View in 3D</a>
+
+        </div>
+
+        <div class="box">
+            <span class="price"> 160rs </span>
+            <img src="images/Ultimate Oreo.jpeg" alt="">
+            <h3> Ultimate Oreo</h3>
+            <a href="index2.html" target="_blank" rel="ar" class="btn">View in 3D</a>
+
+        </div>
+        
+        <div class="box">
+            <span class="price"> 140rs </span>
+            <img src="images/Caramel Delight.jpeg" alt="">
+            <h3> Caramel Delight</h3>
+            <a href="index2.html" target="_blank" rel="ar" class="btn">View in 3D</a>
+
+        </div>
+
+        <div class="box">
+            <span class="price"> 140rs </span>
+            <img src="images/Dark and Milk Fantasy.jpeg" alt="">
+            <h3> Dark and Milk Fantasy</h3>
+            <a href="index2.html" target="_blank" rel="ar" class="btn">View in 3D</a>
+
+        </div>
+
+        <div class="box">
+            <span class="price"> 140rs </span>
+            <img src="images/Dark and White Fantasy.jpeg" alt="">
+            <h3> Dark and White Fantasy</h3>
+            <a href="index2.html" target="_blank" rel="ar" class="btn">View in 3D</a>
+
+        </div>
+
+        <div class="box">
+            <span class="price"> 150rs </span>
+            <img src="images/Milky BAr.jpeg" alt="">
+            <h3> Milky Bar</h3>
+            <a href="index2.html" target="_blank" rel="ar" class="btn">View in 3D</a>
+
+        </div>
+
+        <div class="box">
+            <span class="price"> 140rs </span>
+            <img src="images/Oreo Cookie Crumbles.jpeg" alt="">
+            <h3> Oreo Cookie Crumble</h3>
+            <a href="index2.html" target="_blank" rel="ar" class="btn">View in 3D</a>
+
+        </div>
 </section>
 
 <!-- popular section ends -->
@@ -392,7 +492,7 @@
                     <input class="star star-2" id="star-2" type="radio" name="2"/>
                     <label class="star star-2" for="star-2"></label>
                     <input class="star star-2" id="star-1" type="radio" name="1"/>
-                    <label class="star star-2   " for="star-1"></label>
+                    <label class="star star-2" for="star-1"></label>
                     </form>
                     <input type="submit" value="Rate Now" class="btn">    
                  </div>        
@@ -424,14 +524,10 @@
 
 <!-- scroll top button  -->
 <a href="#home" class="fas fa-angle-up" id="scroll-top"></a>
-
-<!-- loader  
+ <!--loader  
 <div class="loader-container">
     <img src="images/loader.gif" alt="">
-</div>
--->
-
-
+</div>-->
 
 
 

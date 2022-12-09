@@ -1,3 +1,4 @@
+
 let menu = document.querySelector('#menu-bar');
 let navbar = document.querySelector('.navbar');
 
@@ -21,8 +22,8 @@ window.onscroll = () =>{
 
 }
 
-function loader(){
-  document.querySelector('.loader-container').classList.add('fade-out');
+/*function loader(){
+  document.querySelector('.loader-container').classList.add('fadeout');
 }
 
 function fadeOut(){
@@ -30,3 +31,4 @@ function fadeOut(){
 }
 
 window.onload = fadeOut();
+*/
