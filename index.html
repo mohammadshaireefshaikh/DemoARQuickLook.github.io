@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBEAG4l32MswTnNSNw3LWXXOX-QM08iiA&callback=initMap">
 </script>
 </head>
 
@@ -30,20 +29,8 @@
 <header>
 
     <a href="#" class="logo">
-        <img src="images/logo copy.png" alt="" id="demo" onload="getLocation()" ></i>Conical Gaufres</a>
-        <script>
-            var x = document.getElementById("demo");
-        function getLocation() {
-          if (navigator.geolocation) {
-                   navigator.geolocation.watchPosition(showPosition);
-             } else {
-                x.innerHTML = "Geolocation is not supported by this browser.";
-              }
-            }
-            function showPosition(position) {
-             x.innerHTML = "Latitude: " + position.coords.latitude +"Longitude: " + position.coords.longitude;
-            }
-            </script>
+        <div id="location-details"></div>
+        <img src="images/logo copy.png" alt="" id="get-location" ></i>Conical Gaufres</a>
         
 
     <div id="menu-bar" class="fas fa-bars" ></div>
