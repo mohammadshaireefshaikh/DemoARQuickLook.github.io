@@ -91,8 +91,8 @@ window.addEventListener("load",function() {
   // uncomment next line
   // const url = new URL(location.href)
   // delete next line
-  //const url = new URL(location.href);
-  const url = new URL("http://127.0.0.1:5500/index.html?PartnerName=Fiza+Shaikh#order");
+  const url = new URL(location.href);
+  //const url = new URL("http://127.0.0.1:5500/index.html?PartnerName=Fiza+Shaikh#order");
   let naam = url.searchParams.get("PartnerName")
   
   naam = naam ? naam.toProperCase() : "";
