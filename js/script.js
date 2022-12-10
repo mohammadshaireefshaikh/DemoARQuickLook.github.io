@@ -68,3 +68,51 @@ const showLocation = async (position) => {
   let data = await response.json();
   locationDiv.innerText = `${data.address.city}, ${data.address.country}`;
 };
+
+
+
+const Name = document.getElementById('PartnerName');
+
+/*
+Name.onchange = function(e) {
+  Name.value = e.target.value;
+};*/
+
+
+
+
+
+
+
+
+String.prototype.toProperCase = function () { return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});};
+
+window.addEventListener("load",function() {
+  // uncomment next line
+  // const url = new URL(location.href)
+  // delete next line
+  //const url = new URL(location.href);
+  const url = new URL("http://127.0.0.1:5500/index.html?PartnerName=Fiza+Shaikh#order");
+  let naam = url.searchParams.get("PartnerName")
+  
+  naam = naam ? naam.toProperCase() : "";
+  if (typeof(Storage) !== "undefined") {
+    // Store
+    localStorage.setItem("PartnerName", naam);
+    // Retrieve
+    document.getElementById("PartnerName").innerHTML = localStorage.getItem("PartnerName");
+  } 
+  const temp='';
+  if(naam != '')
+  {
+    Name.innerText = naam;
+    temp = naam;
+  }
+  else if(temp != ''){
+    
+    Name.innerText = temp;
+  }
+  else {
+    Name.innerText = 'Store Partner Name';
+  }
+})

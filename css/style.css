@@ -652,3 +652,17 @@ label.star:before {
     }
 
   }
+
+
+
+  .dropdown.dropdown-link-wrapper {
+    display: inline-block;
+    }
+    
+    .dropdown.dropdown-link-wrapper .dropdown-menu {
+    padding: 5px 10px;
+    }
+    
+    .dropdown.dropdown-link-wrapper .dropdown-menu a{
+    display: block;
+    }
