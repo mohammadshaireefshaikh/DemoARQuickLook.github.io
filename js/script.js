@@ -1,22 +1,22 @@
 
 let menu = document.querySelector('#menu-bar');
 let navbar = document.querySelector('.navbar');
-
-menu.onclick = () =>{
+/*
+menu.onclick = () => {
 
   menu.classList.toggle('fa-times');
   navbar.classList.toggle('active');
 
 }
-
-window.onscroll = () =>{
+*/
+window.onscroll = () => {
 
   menu.classList.remove('fa-times');
   navbar.classList.remove('active');
 
-  if(window.scrollY > 60){
+  if (window.scrollY > 60) {
     document.querySelector('#scroll-top').classList.add('active');
-  }else{
+  } else {
     document.querySelector('#scroll-top').classList.remove('active');
   }
 
@@ -77,39 +77,41 @@ const Name = document.getElementById('PartnerName');
 Name.onchange = function(e) {
   Name.value = e.target.value;
 };*/
+function loadNewModel(ModelName1,ModelName2) {
+  localStorage.setItem("ModelName1", ModelName1);
+  localStorage.setItem("ModelName2", ModelName2);
+    document.getElementById("Mini waffle").href = "index2.html";
+}
 
 
 
 
 
 
+String.prototype.toProperCase = function () { return this.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); }); };
 
-
-String.prototype.toProperCase = function () { return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});};
-
-window.addEventListener("load",function() {
+window.addEventListener("load", function () {
   // uncomment next line
   // const url = new URL(location.href)
   // delete next line
   const url = new URL(location.href);
   //const url = new URL("http://127.0.0.1:5500/index.html?PartnerName=Fiza+Shaikh#order");
   let naam = url.searchParams.get("PartnerName")
-  
+
   naam = naam ? naam.toProperCase() : "";
-  if (typeof(Storage) !== "undefined") {
+  if (typeof (Storage) !== "undefined") {
     // Store
     localStorage.setItem("PartnerName", naam);
     // Retrieve
     document.getElementById("PartnerName").innerHTML = localStorage.getItem("PartnerName");
-  } 
-  const temp='';
-  if(naam != '')
-  {
+  }
+  const temp = '';
+  if (naam != '') {
     Name.innerText = naam;
     temp = naam;
   }
-  else if(temp != ''){
-    
+  else if (temp != '') {
+
     Name.innerText = temp;
   }
   else {
