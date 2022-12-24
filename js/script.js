@@ -84,7 +84,7 @@ function loadNewModel(ModelName1,ModelName2) {
     document.getElementById("Mini waffle").href = "index2.html";
 }
 
-function validateForm() {
+function validateForm(form) {
   let x = document.forms["myForm"]["Name"].value;
   if (x == "") {
     alert("Name must be filled out");
@@ -100,6 +100,12 @@ function validateForm() {
     alert("Please Give Rating");
     return false;
   }
+  else SubForm();
+}
+
+function GoBack()
+{
+  history.back();
 }
 
 

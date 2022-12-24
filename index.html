@@ -477,17 +477,17 @@
                 <img src="images/waffle.jpg" alt="">
             </div>
 
-            <form name = "myForm" method="POST" onsubmit="return validateForm()" action="https://script.google.com/macros/s/AKfycbwir_ZvT-3INoibYPF9G1wzCNBw_p_5MilKlnu2sR9hxgEt5k4_7wj2vLree5npHhGO/exec">
+            <form id="myForm" name="myForm" onsubmit="return validateForm(this)">
 
                 <div class="inputBox">
                     <input for="Name" name="Name" type="text" placeholder="Name">
                     <input for="Number" name="Number" type="number" placeholder="Number">
                 </div>
                 <div>
-                    <label class="list" >Your store partner:</label>
-                <input  name="PartnerName" id="PartnerName" type="text" value="Store Partner Name"></input>   
+                    <label class="list">Your store partner:</label>
+                    <input name="PartnerName" id="PartnerName" type="text" value="Store Partner Name"></input>
                 </div>
-                
+
                 <textarea for="Summary" placeholder="Feedback" name="Summary" id="" cols="30" rows="10"></textarea>
                 <!--<div class="stars">
                     <input class="star star-5" id="star-5" type="radio" name="star-5" />
@@ -506,26 +506,29 @@
                 <fieldset class="rating">
                     <legend>Rate our product:</legend>
                     <input type="radio" id="no-rate" class="input-no-rate" name="Rating" value="0" checked=""
-                       aria-label="No rating.">
-           
+                        aria-label="No rating.">
+
                     <input type="radio" id="rate1" name="Rating" value="1">
                     <label for="rate1">1 star</label>
-           
+
                     <input type="radio" id="rate2" name="Rating" value="2">
                     <label for="rate2">2 stars</label>
-           
+
                     <input type="radio" id="rate3" name="Rating" value="3">
                     <label for="rate3">3 stars</label>
-           
+
                     <input type="radio" id="rate4" name="Rating" value="4">
                     <label for="rate4">4 stars</label>
-           
+
                     <input type="radio" id="rate5" name="Rating" value="5">
                     <label for="rate5">5 stars</label>
-           
+
                     <span class="focus-ring"></span>
-                 </fieldset>
-                 <input type="submit" value="Rate Now" class="btn">
+                </fieldset>
+                <div class="box">
+                    <a onclick="return validateForm(this)" value="Rate Now" class="btn">Rate Now</a>
+                </div>
+
 
 
             </form>
@@ -559,7 +562,23 @@
 </div>-->
 
 
-
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        function SubForm() {
+            $.ajax({
+                url: 'https://script.google.com/macros/s/AKfycbwir_ZvT-3INoibYPF9G1wzCNBw_p_5MilKlnu2sR9hxgEt5k4_7wj2vLree5npHhGO/exec',
+                type: 'post',
+                data: $("#myForm").serializeArray(),
+                success: function () {
+                    alert("Form Data Submitted :)")
+                },
+                error: function () {
+                    alert("There was an error :(")
+                }
+            });
+        }
+    </script>
 
 
 
