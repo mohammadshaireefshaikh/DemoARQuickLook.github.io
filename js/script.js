@@ -1,14 +1,14 @@
 
 let menu = document.querySelector('#menu-bar');
 let navbar = document.querySelector('.navbar');
-/*
+
 menu.onclick = () => {
 
   menu.classList.toggle('fa-times');
   navbar.classList.toggle('active');
 
 }
-*/
+
 window.onscroll = () => {
 
   menu.classList.remove('fa-times');
@@ -32,7 +32,7 @@ function fadeOut(){
 
 window.onload = fadeOut();
 */
-
+/*
 let locationButton = document.getElementById("get-location");
 let locationDiv = document.getElementById("location-details");
 window.onload = () => {
@@ -70,21 +70,37 @@ const showLocation = async (position) => {
 };
 
 
-
+*/
 const Name = document.getElementById('PartnerName');
 
 /*
 Name.onchange = function(e) {
   Name.value = e.target.value;
 };*/
+
 function loadNewModel(ModelName1,ModelName2) {
   localStorage.setItem("ModelName1", ModelName1);
   localStorage.setItem("ModelName2", ModelName2);
     document.getElementById("Mini waffle").href = "index2.html";
 }
 
-
-
+function validateForm() {
+  let x = document.forms["myForm"]["Name"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  let y = document.forms["myForm"]["Number"].value;
+  if (y == "" || y.length <= 9 ) {
+    alert("Please enter full number");
+    return false;   
+  }
+  let z = document.forms["myForm"]["Rating"].value;
+  if (z <= 0 || z == "") {
+    alert("Please Give Rating");
+    return false;
+  }
+}
 
 
 
@@ -107,14 +123,18 @@ window.addEventListener("load", function () {
   }
   const temp = '';
   if (naam != '') {
-    Name.innerText = naam;
+    Name.value= naam;
     temp = naam;
   }
   else if (temp != '') {
 
-    Name.innerText = temp;
+    Name.setAttribute(value) = temp;
   }
   else {
-    Name.innerText = 'Store Partner Name';
+    Name.setAttribute(value) = 'Store Partner Name';
   }
 })
+
+
+
+
