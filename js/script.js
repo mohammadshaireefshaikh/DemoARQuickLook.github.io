@@ -108,7 +108,15 @@ function GoBack()
   history.back();
 }
 
+var x = document.getElementById("videoToPlay");
 
+function playVid() {
+
+  x.play();
+
+}
+
+window.onload = playVid();
 
 String.prototype.toProperCase = function () { return this.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); }); };
 
@@ -140,7 +148,3 @@ window.addEventListener("load", function () {
     Name.setAttribute(value) = 'Store Partner Name';
   }
 })
-
-
-
-
