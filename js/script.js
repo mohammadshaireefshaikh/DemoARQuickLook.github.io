@@ -115,7 +115,7 @@ var x = document.getElementById("videoToPlay");
 
 function playVid() {
   
- // document.addEventListener('contextmenu', event => event.preventDefault());
+ document.addEventListener('contextmenu', event => event.preventDefault());
   x.play();
 
 }
