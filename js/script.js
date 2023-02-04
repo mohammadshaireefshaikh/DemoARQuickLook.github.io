@@ -73,7 +73,7 @@ const showLocation = async (position) => {
 */
 const Name = document.getElementById('PartnerName');
 $('img').mousedown(function (e) {
-  if(e.button == 2) { // right click
+  if (e.button == 2) { // right click
     return false; // do nothing!
   }
 });
@@ -114,13 +114,12 @@ function GoBack() {
 var x = document.getElementById("videoToPlay");
 
 function playVid() {
-  
- document.addEventListener('contextmenu', event => event.preventDefault());
+
+  document.addEventListener('contextmenu', event => event.preventDefault());
   x.play();
 
 }
 
-window.onload = playVid();
 
 String.prototype.toProperCase = function () { return this.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); }); };
 
@@ -155,7 +154,16 @@ window.addEventListener("load", function () {
   }
 })
 
+preventLongPressMenu(document.getElementsByTagName('img'));
 
+function preventLongPressMenu(nodes) {
+  for (var i = 0; i < nodes.length; i++) {
+    nodes[i].ontouchstart = absorbEvent_;
+    nodes[i].ontouchmove = absorbEvent_;
+    nodes[i].ontouchend = absorbEvent_;
+    nodes[i].ontouchcancel = absorbEvent_;
+  }
+}
 
 
 
@@ -328,22 +336,36 @@ const touchSlide = (() => {
 
 
 
-document.onkeydown=function(e)
-{
-  if(e.key == 123)
-  {
+document.onkeydown = function (e) {
+  if (e.key == 123) {
     return false;
   }
-  if(e.ctrlKey && e.shiftKey && e.key == 'I'.charCodeAt(0))
-  {
+  if (e.ctrlKey && e.shiftKey && e.key == 'I'.charCodeAt(0)) {
     return false;
   }
-  if(e.ctrlKey && e.shiftKey && e.key == 'J'.charCodeAt(0))
-  {
+  if (e.ctrlKey && e.shiftKey && e.key == 'J'.charCodeAt(0)) {
     return false;
   }
-  if(e.ctrlKey &&  e.key == 'U'.charCodeAt(0))
-  {
+  if (e.ctrlKey && e.key == 'U'.charCodeAt(0)) {
     return false;
   }
+}
+
+
+
+
+jQuery(function ($) {
+  var ssb_panel = $('#ssb-container'), ssb_panel_w = ssb_panel.width(), sbb_display_margin = 50, window_width = jQuery(window).width(); ssb_panel.css('z-index', ssb_ui_data.z_index); if (ssb_panel.hasClass('ssb-btns-left') && (ssb_panel.hasClass('ssb-anim-slide') || ssb_panel.hasClass('ssb-anim-icons'))) { ssb_panel.css('left', '-' + (ssb_panel_w - sbb_display_margin) + 'px'); } else if (ssb_panel.hasClass('ssb-btns-right') && (ssb_panel.hasClass('ssb-anim-slide') || ssb_panel.hasClass('ssb-anim-icons'))) { ssb_panel.css('right', '-' + (ssb_panel_w - sbb_display_margin) + 'px'); }
+  if (window_width >= 768) { ssb_panel.hover(function () { if (ssb_panel.hasClass('ssb-btns-left') && ssb_panel.hasClass('ssb-anim-slide')) { ssb_panel.stop().animate({ 'left': 0 }, 300); } else if (ssb_panel.hasClass('ssb-btns-right') && ssb_panel.hasClass('ssb-anim-slide')) { ssb_panel.stop().animate({ 'right': 0 }, 300); } }, function () { if (ssb_panel.hasClass('ssb-btns-left') && ssb_panel.hasClass('ssb-anim-slide')) { ssb_panel.animate({ 'left': '-' + (ssb_panel_w - sbb_display_margin) + 'px' }, 300); } else if (ssb_panel.hasClass('ssb-btns-right') && ssb_panel.hasClass('ssb-anim-slide')) { ssb_panel.animate({ 'right': '-' + (ssb_panel_w - sbb_display_margin) + 'px' }, 300); } }); } else { ssb_panel.click(function (e) { if (jQuery(this).hasClass('ssb-open')) { jQuery(this).removeClass('ssb-open'); if (ssb_panel.hasClass('ssb-btns-left') && ssb_panel.hasClass('ssb-anim-slide')) { ssb_panel.animate({ 'left': '-' + (ssb_panel_w - sbb_display_margin) + 'px' }, 300); } else if (ssb_panel.hasClass('ssb-btns-right') && ssb_panel.hasClass('ssb-anim-slide')) { ssb_panel.animate({ 'right': '-' + (ssb_panel_w - sbb_display_margin) + 'px' }, 300); } } else { e.preventDefault(); jQuery(this).addClass('ssb-open'); if (ssb_panel.hasClass('ssb-btns-left') && ssb_panel.hasClass('ssb-anim-slide')) { ssb_panel.stop().animate({ 'left': 0 }, 300); } else if (ssb_panel.hasClass('ssb-btns-right') && ssb_panel.hasClass('ssb-anim-slide')) { ssb_panel.stop().animate({ 'right': 0 }, 300); } } }); }
+});
+
+
+
+function openCity(cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(cityName).style.display = "block";
 }
