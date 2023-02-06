@@ -36,8 +36,7 @@ html {
 }
 
 body {
-  background-image: url("https://github.com/mohammadshaireefshaikh/DemoARQuickLook.github.io/blob/main/images/BG.png");
-  background-repeat: 12;
+  background-image: url("BG.png");
 }
 
 section {
